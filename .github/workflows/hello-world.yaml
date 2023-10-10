@@ -3,8 +3,15 @@ on:
   push: 
     branches: [main]
 jobs:
+  say-hello:
+    runs-on: ubuntu-latest
+    steps: 
+      - name: dungnguyen
+      - run: echo hello world
+
   day:
     runs-on: ubuntu-latest
     steps: 
-      - run: echo "TODAY=$(date +%y-%m-%d)" >> $GITHUB_ENV
+      - name: today
+      - run: echo "TODAY=$(date + %y-%m-%d)" >> $GITHUB_ENV
       - run: echo Hello world, today is $TODAY
